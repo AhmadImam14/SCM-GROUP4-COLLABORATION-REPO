@@ -1,21 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-first-react-project</title>
-  </head>
-  <body>
-    <h1 aria-colcount="2"> Welcome to SCM Group 4 Collaboration Team</h1>
-    <p>Username: 
-      <input type="text" id="username" name="username" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First React Project</title>
+
+  <style>
+    body {
+      background-color: #f4f7fc;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #0d6efd;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 320px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: #0d6efd;
+      outline: none;
+      box-shadow: 0 0 5px rgba(13,110,253,0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #084298;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h1>Welcome to SCM Group 4 Collaboration Team</h1>
+
+    <p>
+      Username:
+      <input type="text" id="username" name="username" placeholder="Enter username">
     </p>
-    <p style="color: #000;">Password: 
-      <input type="password" id="password" name="password" />
+
+    <p>
+      Password:
+      <input type="password" id="password" name="password" placeholder="Enter password">
     </p>
-    <button id="loginButton">Login</button> 
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+    <button id="loginButton">Login</button>
+  </div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+</body>
 </html>
