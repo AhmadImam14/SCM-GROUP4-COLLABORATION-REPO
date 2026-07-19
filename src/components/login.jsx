@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 
-function Login({ switchForm }) {
+function Login({ switchForm, onLogin }) {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    onLogin();
+    navigate("/dashboard");
+  };
+
   return (
     <div className="container">
       <form className="card">
@@ -16,7 +24,7 @@ function Login({ switchForm }) {
           placeholder="Password"
         />
 
-        <button>Login</button>
+        <button type="button" onClick={handleLogin}>Login</button>
 
         <p>
           Don't have an account?

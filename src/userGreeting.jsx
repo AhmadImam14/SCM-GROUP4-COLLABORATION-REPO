@@ -1,14 +1,9 @@
-function UserGreeting(props) {
-
-        if(props.isLoggedin) {
-            return
-            <h1>Welcome back, {props.name}!</h1>
-
-        } else {
-            return
-            <h1>Please sign up.</h1>
-        
-        }
+function UserGreeting({ isLoggedIn, name }) {
+  return (
+    <h1>
+      {isLoggedIn ? `Welcome back, ${name}!` : "Please sign up."}
+    </h1>
+  );
 }
 
-export default userGreeting;
+export default UserGreeting;
