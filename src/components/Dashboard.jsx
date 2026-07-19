@@ -11,8 +11,8 @@ function Dashboard({ onLogout, name = "User" }) {
   };
 
   return (
-    <div className="container">
-      <div className="card dashboard-card">
+    <div className="dash-container">
+      <div className="dash-card">
         <UserGreeting isLoggedIn={true} name={name} />
 
         <p className="dashboard-text">
